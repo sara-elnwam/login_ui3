@@ -1,4 +1,4 @@
-name: android_o_projects # تم تغيير اسم المشروع ليتوافق مع اسم المجلد الرئيسي
+name: login_ui3 # تم تغيير اسم المشروع ليكون login_ui3 كما طلبت
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to

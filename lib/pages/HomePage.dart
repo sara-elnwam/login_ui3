@@ -59,12 +59,10 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      // --- START: Updated from FlatButton to TextButton ---
                       TextButton(
-                        // onPressed is still null as per original code comment
                         onPressed: null,
                         style: TextButton.styleFrom(
-                          padding: EdgeInsets.zero, // Remove default padding
+                          padding: EdgeInsets.zero,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
@@ -75,7 +73,7 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30),
                           ),
                           height: 50,
-                          width: 170, // Added a fixed width for consistency
+                          width: 170,
                           child: Center(
                             child: Text(
                               "Login",
@@ -87,7 +85,6 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // --- END: Updated from FlatButton to TextButton ---
                       Text(
                         "Forgot your password?",
                         style: GoogleFonts.ubuntu(
@@ -137,7 +134,6 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Row(
                         children: [
-                          // Ensure 'assets/facebook.png' exists and is correctly declared in pubspec.yaml
                           Image.asset("assets/facebook.png"),
                           SizedBox(
                             width: 10,
@@ -181,7 +177,6 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Row(
                         children: [
-                          // Ensure 'assets/twitter.png' exists and is correctly declared in pubspec.yaml
                           Image.asset("assets/twitter.png", color: Colors.white),
                           SizedBox(
                             width: 10,
@@ -229,7 +224,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// Helper widget for input fields
 Widget input(String hint, bool pass) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
@@ -239,7 +233,7 @@ Widget input(String hint, bool pass) {
         color: Colors.white,
       ),
       child: TextFormField(
-        obscureText: pass, // Use obscureText for password fields
+        obscureText: pass,
         decoration: InputDecoration(
           hintText: hint,
           hintStyle: GoogleFonts.ubuntu(color: Colors.grey),
@@ -251,7 +245,6 @@ Widget input(String hint, bool pass) {
               ? null
               : Icon(Icons.assignment_turned_in_rounded, color: Colors.greenAccent),
           border: UnderlineInputBorder(borderSide: BorderSide.none),
-          // Add fill color to match the container's background
           filled: true,
           fillColor: Colors.white,
         ),
@@ -260,7 +253,6 @@ Widget input(String hint, bool pass) {
   );
 }
 
-// CustomClipper for the top wave shape
 class DrawClip extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -278,7 +270,6 @@ class DrawClip extends CustomClipper<Path> {
   }
 }
 
-// CustomClipper for the second top wave shape
 class DrawClip2 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
